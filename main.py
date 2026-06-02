@@ -1,3 +1,6 @@
+def mostrar_liquidacion():
+    pass
+
 while True:
     # Mostrar menu
     print("Selecciona la opcion que deseas realizar")
