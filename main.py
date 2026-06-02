@@ -2,6 +2,7 @@ def mostrar_liquidacion():
     pass
 
 while True:
+    try:
     # Mostrar menu
     print("Selecciona la opcion que deseas realizar")
     print("1- Calcular comision")
@@ -24,4 +25,13 @@ while True:
             print("Saliendo...")
             print("|------------------|")
             exit()
+            break
+        case _:
+            print ("Error: Debes de ingresar una opcion valida (1,2 0 3).")
+        
+        except ValueError:
+            print ("Error: Debes ingresar un número entero.")
+
+nombre_vendedor= input("Ingrese su nombre:")
+cantidad_ventas= int(input("Ingrese la cantidad de ventas realizadas:"))
 
