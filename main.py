@@ -1,4 +1,5 @@
 while True:
+    try:
     # Mostrar menu
     print("Selecciona la opcion que deseas realizar")
     print("1- Calcular comision")
@@ -21,4 +22,10 @@ while True:
             print("Saliendo...")
             print("|------------------|")
             exit()
+            break
+        case _:
+            print ("Error: Debes de ingresar una opcion valida (1,2 0 3).")
+        
+        except ValueError:
+            print ("Error: Debes ingresar un número entero.")
 
