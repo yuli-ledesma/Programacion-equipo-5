@@ -29,3 +29,6 @@ while True:
         except ValueError:
             print ("Error: Debes ingresar un número entero.")
 
+nombre_vendedor= input("Ingrese su nombre:")
+cantidad_ventas= int(input("Ingrese la cantidad de ventas realizadas:"))
+
