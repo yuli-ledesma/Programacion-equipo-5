@@ -3,12 +3,12 @@ def mostrar_liquidacion():
 
 def calcular_comision(monto_total):
     if monto_total <= 100000:
-        comision = monto_total * 0.05
+        sueldo_comision = monto_total * 0.05
     if monto_total > 100000 and monto_total <= 300000:
-        comision = monto_total * 0.10
+        sueldo_comision = monto_total * 0.10
     if monto_total > 300000:
-        comision = monto_total * 0.15
-    return comision
+        sueldo_comision = monto_total * 0.15
+    return sueldo_comision
 
 while True:
     try:
@@ -28,8 +28,8 @@ while True:
                 nombre_vendedor= input("Ingrese su nombre:")
                 cantidad_ventas= int(input("Ingrese la cantidad de ventas realizadas:"))
                 monto_total= float(input("Ingrese el monto total de las ventas:"))
-                comision = calcular_comision(monto_total)
-                print(f"El vendedor {nombre_vendedor} ha realizado {cantidad_ventas} ventas por un monto total de ${monto_total:.2f}. Su comisión es de ${comision:.2f}.")
+                sueldo_comision = calcular_comision(monto_total)
+                print(f"El vendedor {nombre_vendedor} ha realizado {cantidad_ventas} ventas por un sueldo total de ${sueldo_comision:.2f}.")
             case 2:
                 print("|------------------|")
                 print("Ver recibos")
