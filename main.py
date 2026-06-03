@@ -1,5 +1,10 @@
-def mostrar_liquidacion():
-    pass
+def mostrar_liquidacion(nombre_vendedor, cantidad_ventas, monto_total, sueldo_comision):
+    return f"""
+        Recibo de sueldo del vendedor {nombre_vendedor}
+        Cantidad de ventas realizadas: {cantidad_ventas}
+        Monto total de las ventas: ${monto_total:.2f}
+        Sueldo por comision: ${sueldo_comision:.2f}
+        """
 
 def calcular_comision(monto_total):
     if monto_total <= 100000:
@@ -34,6 +39,9 @@ while True:
                 print("|------------------|")
                 print("Ver recibos")
                 print("|------------------|")
+                #Caso de prueba, mas adelante se automatizara
+                message = mostrar_liquidacion("Victorio", 10, 1000, 50)
+                print(message)
             case 3:
                 print("|------------------|")
                 print("Saliendo...")
