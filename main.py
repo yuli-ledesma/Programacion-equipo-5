@@ -36,13 +36,13 @@ while True:
                     nombre_vendedor= input("Ingrese su nombre:") 
 
                 cantidad_ventas= int(input("Ingrese la cantidad de ventas realizadas:"))
-                while cantidad_ventas.isdigit() == False and cantidad_ventas > 100000:
+                while cantidad_ventas.isdigit() == False:
                     print("Error: La cantidad de ventas debe ser un numero entero.")
                 cantidad_ventas= int(input("Ingrese la cantidad de ventas realizadas:"))
 
                 monto_total= float(input("Ingrese el monto total de las ventas:")) 
-                while monto_total < 0 and monto_total > 100000:
-                    print("Error: El monto total de las ventas no puede ser negativo ni mayor a $100000.")
+                while monto_total < 0:
+                    print("Error: El monto total de las ventas no puede ser negativo.")
                     monto_total= float(input("Ingrese el monto total de las ventas:"))
                 sueldo_comision = calcular_comision(monto_total)
                 print(f"El vendedor {nombre_vendedor} ha realizado {cantidad_ventas} ventas por un sueldo total de ${sueldo_comision:.2f}.")
